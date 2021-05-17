@@ -30,7 +30,7 @@ function doLogWork() {
 
     }else{
         let loginDiv = document.getElementById("loginNav")
-        loginDiv.innerHTML = "<a class=\"button_reg\" href=\"login.html\">login</a>";
+        loginDiv.innerHTML = "<a class=\"button_reg\" href=\"/login\">Login</a>";
     }
 }
 doLogWork();
