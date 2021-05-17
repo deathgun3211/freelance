@@ -15,10 +15,10 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="#home">Freelance for poor</a>
         <div class="main">
-            <a class="button_main">find work</a>
+            <a class="button_main" href="find_work.html">find work</a>
             <a class="button_main" href="index.html">about us</a>
         </div>
-        <div class="login">
+        <div class="login" id="loginNav">
             <a class="button_reg" href="login.html">login</a>
         </div>
     </div>
@@ -28,10 +28,10 @@
         <div class="fadeIn first">
             <img src="img/user.png" id="icon" alt="User Icon" />
         </div>
-        <form>
+        <form id="login-form">
             <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
             <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-            <input type="submit" class="fadeIn fourth" value="Log In" src="user.html">
+            <input type="submit" class="fadeIn fourth" value="Log In" src="index.html" onclick="handleData(),doLogIn()">
         </form>
 
     </div>
@@ -129,6 +129,9 @@
         <a class="text-reset fw-bold">Muriash Roman</a>
     </div>
 </footer>
+<script src="js/login/logIn.js"></script>
+<script src="js/login/HandleData.js"></script>
+<script src="js/saveData.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
