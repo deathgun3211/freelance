@@ -18,9 +18,17 @@
             <a class="button_main" href="/find-work">Find work</a>
             <a class="button_main" href="/about-us">About us</a>
         </div>
+        <%if (isAuthenticated) { %>
+            <div class="login" id="loginNav">
+                <a class="button_reg">account settings</a>
+                <img src="/img/user.png" class="user_img">
+                <a class="user_text" href="/logout">User</a>
+            </div>
+        <% } else{ %>
         <div class="login" id="loginNav">
-            <a class="button_reg" href="/login">Login</a>
-        </div>
+                <a class="button_reg" href="/login">Login</a>
+            </div>
+        <% } %>
     </div>
 </nav>
 <div class="wrapper fadeInDown">
@@ -28,10 +36,10 @@
         <div class="fadeIn first">
             <img src="img/user.png" id="icon" alt="User Icon" />
         </div>
-        <form id="login-form" method="post" action="/">
+        <form id="login-form" method="POST" action="/login">
             <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
             <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
-            <input type="submit" class="fadeIn fourth" value="Log In" src="/find-work" onclick="handleData(),doLogIn()">
+            <input type="submit" class="fadeIn fourth" value="Log In"> <!--onclick="handleData(),doLogIn()"-->
         </form>
 
     </div>

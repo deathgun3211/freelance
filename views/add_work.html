@@ -15,12 +15,20 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="#home">Freelance for poor</a>
         <div class="main">
-            <a class="button_main" href="find_work.ejs">Find work</a>
-            <a class="button_main" href="index.ejs">About us</a>
+            <a class="button_main" href="/find_work">Find work</a>
+            <a class="button_main" href="/index">About us</a>
         </div>
+        <%if (isAuthenticated) { %>
         <div class="login" id="loginNav">
-            <a class="button_reg" href="login.ejs">login</a>
+            <a class="button_reg">account settings</a>
+            <img src="/img/user.png" class="user_img">
+            <a class="user_text" onclick="logOut()">User</a>
         </div>
+        <% } else{ %>
+        <div class="login" id="loginNav">
+            <a class="button_reg" href="/login">Login</a>
+        </div>
+        <% } %>
     </div>
 </nav>
 <div class="form">

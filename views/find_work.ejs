@@ -18,9 +18,17 @@
             <a class="button_main" href="/find-work">Find work</a>
             <a class="button_main" href="/about-us">About us</a>
         </div>
-        <div class="login" id="loginNav">
-            <a class="button_reg" href="/login">login</a>
-        </div>
+        <%if (isAuthenticated) { %>
+            <div class="login" id="loginNav">
+                <a class="button_reg">account settings</a>
+                <img src="/img/user.png" class="user_img">
+                <a class="user_text" href="/logout">User</a>
+            </div>
+        <% } else{ %>
+            <div class="login" id="loginNav">
+                <a class="button_reg" href="/login">Login</a>
+            </div>
+        <% } %>
     </div>
 </nav>
 <div class="card">

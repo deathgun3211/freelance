@@ -19,18 +19,12 @@ function isLogged() {
     return false;
 }
 
-function logOut() {
-    localStorage.removeItem("CurrentLogin");
+function doLogOutWork() {
+    let loginDiv = document.getElementById("loginNav")
+    loginDiv.innerHTML = "<a class=\"button_reg\" href=\"/login\">Login</a>";
 }
 
 function doLogWork() {
-    if(isLogged()){
-        let loginDiv = document.getElementById("loginNav")
-        loginDiv.innerHTML = " <a class=\"button_reg\">account settings</a>\n <img src=\"img/user.png\" class=\"user_img\">\n <a class=\"user_text\" onclick=\"logOut(),doLogWork()\">User</a>";
-
-    }else{
-        let loginDiv = document.getElementById("loginNav")
-        loginDiv.innerHTML = "<a class=\"button_reg\" href=\"/login\">Login</a>";
-    }
+    let loginDiv = document.getElementById("loginNav")
+    loginDiv.innerHTML = " <a class=\"button_reg\">account settings</a>\n <img src=\"img/user.png\" class=\"user_img\">\n <a class=\"user_text\" onclick=\"logOut(),doLogWork()\">User</a>";
 }
-doLogWork();
