@@ -39,6 +39,21 @@ nav a:hover {
 
 }
 
+.inputs {
+    width: 25%;
+}
+
+.baton {
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    border: 3px black solid;
+    border-radius: 8px;
+    margin-left: 45%;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
 .login {
     display: flex;
     justify-content: flex-end;
@@ -73,7 +88,7 @@ nav a:hover {
 
 .card {
     width: 60%;
-    margin: 0px 20%;
+    margin: 10px 20%;
 }
 
 .btn-primary {
