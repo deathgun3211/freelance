@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="efc54fca-2aa7-4716-86c3-ff99226bff82" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/add_work.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/add_work.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/find_work.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/find_work.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/register.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +18,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1sZY2sZTloqubObfBLG9Z008wzR" />
   <component name="ProjectViewState">
@@ -22,6 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../untitled10" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -36,6 +44,7 @@
       <workItem from="1621174524514" duration="7340000" />
       <workItem from="1621240918196" duration="965000" />
       <workItem from="1621279736961" duration="496000" />
+      <workItem from="1621363825965" duration="5160000" />
     </task>
     <servers />
   </component>
@@ -51,5 +60,13 @@
       <screen x="1920" y="2" width="1920" height="1040" />
     </state>
     <state x="3140" y="280" key="FileChooserDialogImpl/0.0.1536.824/1920.2.1920.1040@1920.2.1920.1040" timestamp="1621086422213" />
+    <state x="2697" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621364244450">
+      <screen x="1920" y="2" width="1920" height="1040" />
+    </state>
+    <state x="2697" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.2.1920.1040@1920.2.1920.1040" timestamp="1621364244450" />
+    <state x="2543" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1621367935271">
+      <screen x="1920" y="2" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.2.1920.1040@1920.2.1920.1040" timestamp="1621367935271" />
   </component>
 </project>

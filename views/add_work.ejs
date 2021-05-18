@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
 <div id="home"></div>
@@ -20,6 +20,7 @@
         </div>
         <%if (isAuthenticated) { %>
         <div class="login" id="loginNav">
+            <a class="button_main" href="/add-work">Add work</a>
             <a class="button_reg">account settings</a>
             <img src="/img/user.png" class="user_img">
             <a class="user_text" href="/logout">User</a>
@@ -34,15 +35,19 @@
 </nav>
 <div class="form">
     <div class="form-group">
-        <label for="exampleFormControlInput1">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <label for="exampleFormControlInput1">Work title</label>
+        <input name="title" type="email" class="form-control" id="exampleFormControlInput1">
     </div>
 
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <label for="exampleFormControlTextarea1">Project description</label>
+        <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <label for="exampleFormControlInput1">Required skills</label>
+        <input name="requiredSkills" type="email" class="form-control " id="exampleFormControlInput1">
+        <label for="exampleFormControlInput1">Price</label>
+        <input name="price" type="email" class="form-control inputs" id="exampleFormControlInput1">
     </div>
-    <button>Add</button>
+    <button class="baton">Add</button>
 </div>
 <footer class="text-center text-lg-start bg-light text-muted">
     <section
