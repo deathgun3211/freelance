@@ -1,5 +1,10 @@
+  
 # Default ignored files
+
+*.iml
+*.xml
+*.class
 /shelf/
-/workspace.xml
-/.idea/*
-/node_modules
+/.idea/workspace.xml
+**/.idea/
+**/out/
