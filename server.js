@@ -30,18 +30,27 @@ app.get("/", function (req, res){
 app.get("/about-us", function (req, res){
     res.render("index", {isAuthenticated: isAuthenticated})
 })
-app.get("/login", function (req, res){
-    res.render("login", {isAuthenticated: isAuthenticated})
-})
 app.get("/find-work", function (req, res){
     res.render("find_work", {isAuthenticated: isAuthenticated})
 })
 app.get("/add-work", function (req, res){
     res.render("add_work", {isAuthenticated: isAuthenticated})
 })
-app.get("/register", function (req, res){
-    res.render("register", {isAuthenticated: isAuthenticated})
+app.get("/login", function (req, res){
+    res.render("login", {isAuthenticated: isAuthenticated, isLoginError: false})
 })
+app.get("/register", function (req, res){
+    res.render("register", {isAuthenticated: isAuthenticated, isRegError: false})
+})
+app.get("/logout", function (req, res, next){
+    isAuthenticated = false;
+    res.render("login", {isAuthenticated: isAuthenticated, isLoginError: false})
+    next();
+})
+app.get("/profile", function (req,res) {
+    res.render("my_jobs", {isAuthenticated: isAuthenticated})
+})
+
 
 app.post("/login", function (req,res){
     let username = req.body.username;
@@ -55,20 +64,26 @@ app.post("/login", function (req,res){
             isAuthenticated = true;
             res.render("find_work", {isAuthenticated: isAuthenticated})
         }
+        res.render("login", {isAuthenticated: isAuthenticated, isLoginError: true})
     })
 })
-app.get("/logout", function (req, res, next){
-    isAuthenticated = false;
-    res.render("login", {isAuthenticated: isAuthenticated})
-    next();
-})
+
 app.post("/register", function (req, res){
     let user = new User({
         login: req.body.login,
         password: req.body.password
     })
-    user.save();
-    res.redirect("/login")
+    user.save((err, doc) =>
+        {
+            if(err) {
+                res.render("register", {isAuthenticated: isAuthenticated, isRegError: true})
+                console.log(err)
+                return;
+            }
+            res.redirect("/login")
+        }
+    );
+
 })
 
 app.listen(3000, function (){

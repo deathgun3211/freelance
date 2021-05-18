@@ -26,6 +26,7 @@
             </div>
         <% } else{ %>
             <div class="login" id="loginNav">
+                <a class="button_reg" href="/register">Get started</a>
                 <a class="button_reg" href="/login">Login</a>
             </div>
         <% } %>
@@ -42,6 +43,9 @@
             <div class="fadeIn first">
                 <img src="img/user.png" id="icon" alt="User Icon" />
             </div>
+            <%if (isRegError) { %>
+                <div>Введений логін вже зареєстрований</div>
+            <% }%>
             <form id="register-form" method="POST" action="/register">
                 <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
                 <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
