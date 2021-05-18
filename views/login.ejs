@@ -23,7 +23,7 @@
                 <a class="button_main" href="/add-work">Add work</a>
                 <a class="button_reg">account settings</a>
                 <img src="/img/user.png" class="user_img">
-                <a class="user_text" href="/logout">User</a>
+                <a class="user_text" href="/logout">Logout</a>
             </div>
         <% } else{ %>
             <div class="login" id="loginNav">
@@ -44,16 +44,7 @@
         <form id="login-form" method="POST" action="/login">
             <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
             <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
-            <div>
-                <input type="radio" id="huey" name="drone" value="huey"
-                       checked>
-                <label for="huey">Freelancer</label>
-            </div>
 
-            <div>
-                <input type="radio" id="dewey" name="drone" value="dewey">
-                <label for="dewey">Employer</label>
-            </div>
             <input type="submit" class="fadeIn fourth" value="Log In">
         </form>
 

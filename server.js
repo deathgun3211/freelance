@@ -19,8 +19,15 @@ const usersSchema = {
     login: String,
     password: String,
 }
-
 let User = mongoose.model("users", usersSchema)
+
+const workSchema = {
+    title: String,
+    description: String,
+    requiredSkills: String,
+    price: String
+}
+let Work = mongoose.model("works", workSchema)
 
 let isAuthenticated = false;
 
@@ -31,7 +38,14 @@ app.get("/about-us", function (req, res){
     res.render("index", {isAuthenticated: isAuthenticated})
 })
 app.get("/find-work", function (req, res){
-    res.render("find_work", {isAuthenticated: isAuthenticated})
+
+    Work.find({}, function(err, aplicationsArray) {
+        let aplications = [];
+        aplicationsArray.forEach(function(aplication) {
+            aplications.push(aplication)
+        });
+        res.render("find_work", {isAuthenticated: isAuthenticated, aplications: aplications})
+    });
 })
 app.get("/add-work", function (req, res){
     res.render("add_work", {isAuthenticated: isAuthenticated})
@@ -42,10 +56,9 @@ app.get("/login", function (req, res){
 app.get("/register", function (req, res){
     res.render("register", {isAuthenticated: isAuthenticated, isRegError: false})
 })
-app.get("/logout", function (req, res, next){
+app.get("/logout", function (req, res){
     isAuthenticated = false;
     res.render("login", {isAuthenticated: isAuthenticated, isLoginError: false})
-    next();
 })
 app.get("/profile", function (req,res) {
     res.render("my_jobs", {isAuthenticated: isAuthenticated})
@@ -62,7 +75,7 @@ app.post("/login", function (req,res){
         }
         if(user) {
             isAuthenticated = true;
-            res.render("find_work", {isAuthenticated: isAuthenticated})
+            res.redirect("find-work")
         }
         res.render("login", {isAuthenticated: isAuthenticated, isLoginError: true})
     })
@@ -85,6 +98,20 @@ app.post("/register", function (req, res){
     );
 
 })
+
+app.post("/add-work", function (req, res){
+    let work = new Work({
+        title: req.body.title,
+        description: req.body.description,
+        requiredSkills: req.body.requiredSkills,
+        price: req.body.price
+    })
+    work.save();
+})
+
+
+
+
 
 app.listen(3000, function (){
     console.log("server on port 3000")

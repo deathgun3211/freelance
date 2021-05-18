@@ -23,7 +23,7 @@
                 <a class="button_main" href="/add-work">Add work</a>
                 <a class="button_reg">account settings</a>
                 <img src="/img/user.png" class="user_img">
-                <a class="user_text" href="/logout">User</a>
+                <a class="user_text" href="/logout">Logout</a>
             </div>
         <% } else{ %>
             <div class="login" id="loginNav">
@@ -33,15 +33,23 @@
         <% } %>
     </div>
 </nav>
-<div class="card">
-    <h5 class="card-header"></h5>
-    <div class="card-body">
-        <p class="card-text"></p>
-        <h5 class="card-title"></h5>
-        <h4> p/h$</h4>
-        <button class="baton">Take it</button>
+
+    <% for (var i = 0; i < aplications.length; i++) {%>
+    <div class="card">
+            <h5 class="card-header"><%=aplications[i].title%></h5>
+            <div class="card-body">
+                <p class="card-text"><%=aplications[i].description%></p>
+                <h5 class="card-title"><%=aplications[i].requiredSkills%></h5>
+                <h4> <%=aplications[i].price%></h4>
+            </div>
+        <form method="post" action="/find-work/take-work"></form>
+            <button class="baton">Take it</button>
     </div>
-</div>
+    <%}%>
+
+
+
+
 <footer class="text-center text-lg-start bg-light text-muted">
     <section
             class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">

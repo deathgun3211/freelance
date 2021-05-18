@@ -23,7 +23,7 @@
             <a class="button_main" href="/add-work">Add work</a>
             <a class="button_reg">account settings</a>
             <img src="/img/user.png" class="user_img">
-            <a class="user_text" href="/logout">User</a>
+            <a class="user_text" href="/logout">Logout</a>
         </div>
         <% } else{ %>
         <div class="login" id="loginNav">
@@ -35,16 +35,17 @@
 </nav>
 <div class="form">
     <div class="form-group">
-        <label for="exampleFormControlInput1">Work title</label>
-        <input name="title" type="email" class="form-control" id="exampleFormControlInput1">
-    </div>
 
-    <div class="form-group">
-        <label for="exampleFormControlTextarea1">Project description</label>
-        <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        <label for="exampleFormControlInput1">Required skills</label>
-        <input name="requiredSkills" type="email" class="form-control " id="exampleFormControlInput1">
-        <label for="exampleFormControlInput1">Price</label>
+        <label for="title">Work title</label>
+        <input name="title" class="form-control">
+
+        <label for="description">Project description</label>
+        <input name="description" class="form-control"/>
+
+        <label for="requiredSkills">Required skills</label>
+        <input name="requiredSkills"  class="form-control">
+
+        <label for="price">Price</label>
         <input name="price" type="email" class="form-control inputs" id="exampleFormControlInput1">
     </div>
     <button class="baton">Add</button>
