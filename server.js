@@ -64,7 +64,9 @@ app.get("/profile", function (req,res) {
     res.render("my_jobs", {isAuthenticated: isAuthenticated})
 })
 
-
+//this code is shitt why? why you pput it here u fucking idiot fucking antideveloper (web developer) wtf im doing here inedd to go sleep
+//sleep zz zzzz zzzzz zzzzzz i wanna sleep sleeep Dytkovsyi forse me to do it in 1 hour after midnight i just wanna sleep
+// let me die /// let me die
 app.post("/login", function (req,res){
     let username = req.body.username;
     let password = req.body.password;
@@ -99,7 +101,7 @@ app.post("/register", function (req, res){
 
 })
 
-app.post("/add-work", function (req, res){
+app.post("/add-work/", function (req, res){
     let work = new Work({
         title: req.body.title,
         description: req.body.description,
@@ -107,6 +109,7 @@ app.post("/add-work", function (req, res){
         price: req.body.price
     })
     work.save();
+    res.redirect("find-work")
 })
 
 

@@ -35,20 +35,22 @@
 </nav>
 <div class="form">
     <div class="form-group">
+        <form method="post" action="/add-work">
+            <label for="title">Work title</label>
+            <input name="title" class="form-control">
 
-        <label for="title">Work title</label>
-        <input name="title" class="form-control">
+            <label for="description">Project description</label>
+            <textarea name="description" rows="3" class="form-control"/> </textarea>
 
-        <label for="description">Project description</label>
-        <input name="description" class="form-control"/>
+            <label for="requiredSkills">Required skills</label>
+            <input name="requiredSkills"  class="form-control">
 
-        <label for="requiredSkills">Required skills</label>
-        <input name="requiredSkills"  class="form-control">
+            <label for="price">Price</label>
+            <input name="price" type="number" class="form-control inputs" id="exampleFormControlInput1">
 
-        <label for="price">Price</label>
-        <input name="price" type="email" class="form-control inputs" id="exampleFormControlInput1">
+            <button class="baton">Add</button>
+        </form>
     </div>
-    <button class="baton">Add</button>
 </div>
 <footer class="text-center text-lg-start bg-light text-muted">
     <section
