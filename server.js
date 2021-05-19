@@ -2,12 +2,10 @@ const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
 const bodyParser = require("body-parser")
-// const User = require("./lib/User")
 
 let Port = process.env.PORT || 3000
 
-
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({ extended: true }));
 mongoose.connect("mongodb+srv://admin:vlOORPu8XLGWAXfa@cluster0.zasob.mongodb.net/Freelance", {useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(express.static( "public"));
@@ -50,6 +48,42 @@ app.get("/find-work", function (req, res){
         res.render("find_work", {isAuthenticated: isAuthenticated, aplications: aplications})
     });
 })
+
+app.post("/find-work", function (req, res){
+    // let search = req.body.search
+    // Work.index({ title: 'text' });
+    // let query = {
+    //         "$text": {
+    //             "$search": search
+    //         }
+    // }
+    // Work.find(query
+    // , function(err, result) {
+    //     if (err) throw err;
+    //     if (result) {
+    //         res.json(result)
+    //     } else {
+    //         res.send(JSON.stringify({
+    //             error : 'Error'
+    //         }))
+    //     }
+    // })
+
+    Work.find({title: req.body.search}, function(err, aplicationsArray) {
+        if(err){
+            console.log(err)
+        }
+
+        let aplications = [];
+        aplicationsArray.forEach(function(aplication) {
+            aplications.push(aplication)
+        })
+
+        res.render("find_work", {isAuthenticated: isAuthenticated, aplications: aplications})
+    });
+
+})
+
 app.get("/add-work", function (req, res){
     res.render("add_work", {isAuthenticated: isAuthenticated})
 })
@@ -114,7 +148,6 @@ app.post("/add-work/", function (req, res){
     work.save();
     res.redirect("find-work")
 })
-
 
 
 
