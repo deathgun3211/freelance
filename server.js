@@ -4,6 +4,9 @@ const mongoose = require("mongoose")
 const bodyParser = require("body-parser")
 // const User = require("./lib/User")
 
+let Port = process.env.PORT || 3000
+
+
 app.use(bodyParser.urlencoded({extended: true}))
 mongoose.connect("mongodb+srv://admin:vlOORPu8XLGWAXfa@cluster0.zasob.mongodb.net/Freelance", {useNewUrlParser: true, useUnifiedTopology: true });
 
@@ -116,6 +119,6 @@ app.post("/add-work/", function (req, res){
 
 
 
-app.listen(3000, function (){
-    console.log("server on port 3000")
+app.listen(Port, function (){
+    console.log("server online on port" + Port)
 })
