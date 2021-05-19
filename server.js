@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
 const bodyParser = require("body-parser")
 
 let Port = process.env.PORT || 3000
-
+app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 mongoose.connect("mongodb+srv://admin:vlOORPu8XLGWAXfa@cluster0.zasob.mongodb.net/Freelance", {useNewUrlParser: true, useUnifiedTopology: true });
 
@@ -19,6 +19,7 @@ app.set("view engine", "ejs")
 const usersSchema = {
     login: String,
     password: String,
+    type: String
 }
 let User = mongoose.model("users", usersSchema)
 
@@ -50,38 +51,23 @@ app.get("/find-work", function (req, res){
 })
 
 app.post("/find-work", function (req, res){
-    // let search = req.body.search
-    // Work.index({ title: 'text' });
-    // let query = {
-    //         "$text": {
-    //             "$search": search
-    //         }
-    // }
-    // Work.find(query
-    // , function(err, result) {
-    //     if (err) throw err;
-    //     if (result) {
-    //         res.json(result)
-    //     } else {
-    //         res.send(JSON.stringify({
-    //             error : 'Error'
-    //         }))
-    //     }
-    // })
-
-    Work.find({title: req.body.search}, function(err, aplicationsArray) {
-        if(err){
-            console.log(err)
+    let search = req.body.search
+    let query = {
+            "$text": {
+                "$search": search
+            }
+    }
+    Work.find(query
+    , function(err, result) {
+        if (err) throw err;
+        if (result) {
+            let aplications = [];
+            result.forEach(function (aplication) {
+                aplications.push(aplication)
+            })
+            res.render("find_work", {isAuthenticated: isAuthenticated, aplications: aplications})
         }
-
-        let aplications = [];
-        aplicationsArray.forEach(function(aplication) {
-            aplications.push(aplication)
-        })
-
-        res.render("find_work", {isAuthenticated: isAuthenticated, aplications: aplications})
-    });
-
+    })
 })
 
 app.get("/add-work", function (req, res){
@@ -123,7 +109,8 @@ app.post("/login", function (req,res){
 app.post("/register", function (req, res){
     let user = new User({
         login: req.body.login,
-        password: req.body.password
+        password: req.body.password,
+        type: req.body.type
     })
     user.save((err, doc) =>
         {

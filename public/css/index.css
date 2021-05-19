@@ -373,3 +373,20 @@ input[type=password]:placeholder {
 .user_img {
     height: 40px;
 }
+.baton_search {
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.search_input {
+    border: 2px solid black;
+    border-radius: 100px;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10px;
+}
+footer{
+     margin-top: 50vh;
+     width: 100%;
+ }
