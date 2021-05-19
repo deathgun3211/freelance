@@ -42,32 +42,30 @@
         <% } %>
     </div>
 </nav>
-
-<div class="container h-100">
-    <div class="d-flex justify-content-center h-100">
-        <form class="searchbar" method="post" action="/find-work">
+<div class="search">
+    <form class="searchbar" method="post" action="/find-work">
             <input class="search_input" type="search" name="search" placeholder="Search...">
-        </form>
-    </div>
+            <button class="baton_search"> <i class="fas fa-search"></i></button>
+    </form>
 </div>
-
-
-
     <% for (var i = 0; i < aplications.length; i++) {%>
     <div class="card">
             <h5 class="card-header"><%=aplications[i].title%></h5>
             <div class="card-body">
                 <p class="card-text"><%=aplications[i].description%></p>
                 <h5 class="card-title"><%=aplications[i].requiredSkills%></h5>
-                <h4> <%=aplications[i].price%></h4>
+                <h4> <%=aplications[i].price%> p/h$</h4>
             </div>
         <form method="post" action="/find-work/take-work"></form>
-            <button class="baton">Take it</button>
+            <button class="buget_el_baton">Take it</button>
     </div>
     <%}%>
 
 
+<h1 class="about">About Us</h1>
+<p class="about">Company description This is a summary of the company's highlights: its history, management team, where it is located, what it does and what it hopes to achieve, a mission statement and legal structure. It usually appears after the resume in the business plan.
 
+    The description of the company's business plan describes the vision and activities of the company so that potential lenders and partners can make an accurate impression of the company.</p>
 
 <footer class="text-center text-lg-start bg-light text-muted">
     <section

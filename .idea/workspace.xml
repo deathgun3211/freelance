@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="efc54fca-2aa7-4716-86c3-ff99226bff82" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/add_work.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/add_work.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/searchBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/searchBar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/find_work.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/find_work.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/register.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.ejs" afterDir="false" />
     </list>
@@ -44,26 +42,47 @@
       <workItem from="1621174524514" duration="7340000" />
       <workItem from="1621240918196" duration="965000" />
       <workItem from="1621279736961" duration="496000" />
-      <workItem from="1621363825965" duration="5160000" />
+      <workItem from="1621363825965" duration="6098000" />
+      <workItem from="1621452520684" duration="3567000" />
     </task>
+    <task id="LOCAL-00001" summary="login radio box&#10;add work&#10;find work">
+      <created>1621369464673</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1621369464673</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="login radio box&#10;add work&#10;find work" />
+    <option name="LAST_COMMIT_MESSAGE" value="login radio box&#10;add work&#10;find work" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2632" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1621181509585">
       <screen x="1920" y="2" width="1920" height="1040" />
     </state>
     <state x="2632" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.2.1920.1040@1920.2.1920.1040" timestamp="1621181509585" />
+    <state x="2505" y="90" key="CommitChangelistDialog2" timestamp="1621369463887">
+      <screen x="1920" y="2" width="1920" height="1040" />
+    </state>
+    <state x="2505" y="90" key="CommitChangelistDialog2/0.0.1536.824/1920.2.1920.1040@1920.2.1920.1040" timestamp="1621369463887" />
     <state x="3140" y="280" key="FileChooserDialogImpl" timestamp="1621086422213">
       <screen x="1920" y="2" width="1920" height="1040" />
     </state>
     <state x="3140" y="280" key="FileChooserDialogImpl/0.0.1536.824/1920.2.1920.1040@1920.2.1920.1040" timestamp="1621086422213" />
-    <state x="2697" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621364244450">
+    <state x="2472" y="255" key="Vcs.Push.Dialog.v2" timestamp="1621369474698">
       <screen x="1920" y="2" width="1920" height="1040" />
     </state>
-    <state x="2697" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.2.1920.1040@1920.2.1920.1040" timestamp="1621364244450" />
+    <state x="2472" y="255" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.2.1920.1040@1920.2.1920.1040" timestamp="1621369474698" />
+    <state x="2697" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621452636895">
+      <screen x="1920" y="2" width="1920" height="1040" />
+    </state>
+    <state x="2697" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.2.1920.1040@1920.2.1920.1040" timestamp="1621452636895" />
     <state x="2543" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1621367935271">
       <screen x="1920" y="2" width="1920" height="1040" />
     </state>
